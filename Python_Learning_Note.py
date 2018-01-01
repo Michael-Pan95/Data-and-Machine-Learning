@@ -169,9 +169,9 @@ del list_for_test, tuple_for_test
 # Python set stores the unique value of objects with no order. Just as the Set in JAVA
 # create a set using such syntax: reference = set(...) or reference = {...}
 # Notice! empty set must be created by using set(). Because {} is used for create empty dictionary
-student = {'Mike', 'Zed', 'Lucas', "Zoe", 'Mike', 'mike'}  # duplicate value will be automatically removed
 """
 
+student = {'Mike', 'Zed', 'Lucas', "Zoe", 'Mike', 'mike'}  # duplicate value will be automatically removed
 print('set print: ', student)
 if 'Rose' in student:
     print('Rose is in the set')
@@ -278,3 +278,42 @@ print("ord('a')", ord('a'))
 print("chr(ord('b'))", chr(ord('b')))
 print("hex(10)", hex(10))
 print("oct(10)", oct(10))
+
+'''
+Operands in Python
+Arithmetic operators: + -   *   /   //(Floor division)  %(Modulus)  **(Exponent)
+Comparision operators: >    <   >=  <=  !=  ==
+Logical operators: and, or ,not
+Bitwise operators: &    |   ^(XOR)  >>(Bitwise right shift) <<(Bitwise left shift)
+Assignment operators: +=    -=  *=  /=  //= %=  **= &=  |=  ^=  >>= <<=
+Identity operators: is  is not
+Membership operators: in    not in
+'''
+a = 9
+b = 2
+print('9/2', a / b)
+print('9//2', a // b)
+print('9**2', a ** b)
+print('9>2 and  9<2', a > b and b < a)
+c = 1
+d = 10110
+print('1 >> 1   ', c >> 1)
+print('10110^1    ', d ^ c)
+print('c is c', c is c)
+print('10 in [10,8,9,1]', 10 in [10, 8, 9, 1])
+
+'''
+string format
+'''
+print('use string.format(): {}{}'.format('text replacing first{}', 'text replacing second{}'))
+print('use string.format(): {0}   {1}'.format('string replacing:{0}', 'string replacing:{1}'))
+print('use string.format(): {first} {second}'.format(first='text replacing {first} by using first = ...',
+                                                     second='text replacing {second} by using second = ...'))
+'''
+Python id: every variable is immutable, reference with same value refer to the same place. Just as String in JAVA
+'''
+print('id(2)', id(2))
+a = 2
+b = 2
+print('a = 2; b=2 \nid(a)', id(a))
+print('a is b', a is b)
